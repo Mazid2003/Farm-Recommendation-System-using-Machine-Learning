@@ -58,19 +58,19 @@ Farmers often struggle with **choosing the right crops** due to unpredictable we
 git clone https://github.com/your-username/data-driven-ai-farming.git
 
 cd directory name
-```
+
 ### 2️⃣ Install dependencies
-```
+
 pip install -r requirements.txt
 ```
 ### 3️⃣ Run the Flask app
-```
+
 python app.py
-```
+
 ### 4️⃣ Open the app in your browser
-```
+
 http://127.0.0.1:5000/
-```
+
 
 ## 🌟 Impact & Benefits
 
