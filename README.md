@@ -55,7 +55,7 @@ Farmers often struggle with **choosing the right crops** due to unpredictable we
 
 ### 1️⃣ Clone the repository
 
-git clone https://github.com/your-username/data-driven-ai-farming.git
+git clone https://github.com/Mazid2003/Farm-Recommendation-System-using-Machine-Learning.git
 
 cd directory name
 
