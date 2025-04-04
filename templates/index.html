@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Decision Tool</title>
+    <style>
+        /* Global Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4ef572, #a8e063);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Title Styling */
+        h1 {
+            text-align: center;
+            color: #054a00;
+            margin-top: 20px;
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Transparent Form Container */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 90%;
+            margin: 20px auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Form Styling */
+        form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Form Row Styling */
+        .form-row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-row label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: rgb(0, 0, 0);
+            font-size: 1.1rem;
+        }
+
+        /* Input & Select Fields */
+        .form-row input,
+        .form-row select {
+            padding: 10px;
+            margin: 5px 0;
+            border: 2px solid rgba(5, 5, 5, 0.2);
+            border-radius: 8px;
+            font-size: 1rem;
+            background: rgb(141, 253, 131,0.2);
+            color: #000000;
+            transition: 0.3s;
+        }
+
+        /* Focus Effect */
+        .form-row input:focus,
+        .form-row select:focus {
+            border-color: #218838;
+            outline: none;
+            box-shadow: 0px 0px 10px rgba(33, 136, 56, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🌾Farm Decision Recommendation System🌾</h1>
+    <div class="form-container">
+        <form action="/recommend" method="POST">
+            <div class="form-row">
+                <label for="soil_type">Soil Type:</label>
+                <input type="text" id="soil_type" name="soil_type" required>
+            </div>
+            <div class="form-row">
+                <label for="rainfall">Rainfall:</label>
+                <select id="rainfall" name="rainfall" required>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="temperature">Temperature:</label>
+                <select id="temperature" name="temperature" required>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="soil_moisture">Soil Moisture (%):</label>
+                <input type="number" id="soil_moisture" name="soil_moisture" required>
+            </div>
+            <div class="form-row">
+                <label for="soil_nitrogen">Soil Nitrogen:</label>
+                <select id="soil_nitrogen" name="soil_nitrogen" required>
+                    <option value="low">Low</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="organic_fertilizer_available">Organic Fertilizer Available:</label>
+                <select id="organic_fertilizer_available" name="organic_fertilizer_available" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="price_trend">Price Trend:</label>
+                <select id="price_trend" name="price_trend" required>
+                    <option value="high">High</option>
+                    <option value="dropping">Dropping</option>
+                    <option value="stable">Stable</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="storage_available">Storage Available:</label>
+                <select id="storage_available" name="storage_available" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="chemical_usage">Chemical Usage (kg/ha):</label>
+                <input type="number" id="chemical_usage" name="chemical_usage" required>
+            </div>
+            <div class="form-row">
+                <label for="water_usage">Water Usage (liters/ha):</label>
+                <input type="number" id="water_usage" name="water_usage" required>
+            </div>
+            <div class="form-row">
+                <label for="organic_farming_possible">Is Organic Farming Possible?</label>
+                <select id="organic_farming_possible" name="organic_farming_possible" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <input type="submit" value="Get Recommendations" 
+            style="
+                background: linear-gradient(135deg, #28a745, #218838);
+                color: white;
+                border:#28a745;
+                font-size: 1.1rem;
+                cursor: pointer;
+                padding: 14px 18px;
+                border-radius: 10px;
+                transition: all 0.3s ease-in-out;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 1.2px;
+                box-shadow: 0 4px 10px rgba(33, 136, 56, 0.4);
+                display: block;
+                margin: 20px auto;
+                width: 100%;
+                text-align: center;
+            " 
+            onmouseover="this.style.background='linear-gradient(135deg, #1e8449, #145a32)'; this.style.transform='scale(1.05)'; this.style.boxShadow='0px 6px 15px rgba(46, 204, 113, 0.7)';"
+            onmouseout="this.style.background='linear-gradient(135deg, #28a745, #218838)'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 10px rgba(33, 136, 56, 0.4)';"
+            onmousedown="this.style.transform='scale(0.97)'; this.style.boxShadow='0px 3px 10px rgba(33, 136, 56, 0.8)';"
+            onmouseup="this.style.transform='scale(1.05)';"
+            />
+        </form>
+    </div>
+</body>
+</html>

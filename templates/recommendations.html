@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Recommendations</title>
+    <style>
+        /* Global Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4ef572, #a8e063);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Title Styling */
+        h1 {
+            text-align: center;
+            color: #054a00;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+
+        /* Recommendations Container */
+.recommendations {
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    overflow: visible !important;/* Ensures scaling is visible */
+}
+
+/* Advice Cards */
+.advice {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border-left: 5px solid #054a00;
+    font-size: 1.2rem;
+    color: #000000;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    display: inline-block; /* Allows scaling without layout issues */
+    transform-origin: center; /* Ensures scaling happens from center */
+    will-change: transform; /* Optimizes animations */
+}
+
+/* Smooth Scaling Effect on Hover */
+.advice:hover {
+    transform: scale(1.08) !important; /* Enlarges the card */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.3)!important;
+    z-index: 9999 !important;
+    position: relative !important; /* Ensures it appears above other elements */
+}
+        .advice strong {
+            color: #054a00;
+            font-size: 1.3rem;
+        }
+
+        /* Back Button */
+        .back-btn {
+            display: inline-block;
+            text-align: center;
+            font-size: 1rem;
+            color: white;
+            background: linear-gradient(135deg, #28a745, #218838);
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(33, 136, 56, 0.4);
+            transition: all 0.3s ease-in-out;
+            width: 60%;
+            margin-top: 15px;
+        }
+
+        .back-btn:hover {
+            background: linear-gradient(135deg, #1e8449, #145a32);
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(46, 204, 113, 0.7);
+        }
+
+        .back-btn:active {
+            transform: scale(0.97);
+            box-shadow: 0px 3px 10px rgba(33, 136, 56, 0.8);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .recommendations {
+                width: 95%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .advice {
+                font-size: 0.95rem;
+            }
+
+            .back-btn {
+                font-size: 1rem;
+                width: 80%;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .advice {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+
+            .back-btn {
+                font-size: 0.95rem;
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🌾 Farm Decision Recommendations 🌱</h1>
+    <div class="recommendations">
+        <div class="advice">
+            <strong>🌱 Crop Recommendation:</strong>
+            <p>{{ advice['crop'] }}</p>
+        </div>
+        <div class="advice">
+            <strong>💧 Irrigation Advice:</strong>
+            <p>{{ advice['irrigation'] }}</p>
+        </div>
+        <div class="advice">
+            <strong>🌾 Fertilizer Advice:</strong>
+            <p>{{ advice['fertilizer'] }}</p>
+        </div>
+        <div class="advice">
+            <strong>📈 Market Advice:</strong>
+            <p>{{ advice['market'] }}</p>
+        </div>
+        <div class="advice">
+            <strong>🌍 Sustainability Advice:</strong>
+            <p>{{ advice['sustainability'] }}</p>
+        </div>
+        <a href="/" class="back-btn">⬅️ Return to the main page</a>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const adviceElements = document.querySelectorAll(".advice");
+    
+            adviceElements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(15px) scale(0.95)"; // Start smaller
+                
+                setTimeout(() => {
+                    element.style.transition = "opacity 0.5s ease-out, transform 0.5s ease-out";
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0) scale(1)"; // Normal size
+    
+                    // Fix hover effect
+                    setTimeout(() => {
+                        element.classList.add("hover-enabled"); // Add class to enable hover
+                    }, 500);
+                }, index * 500); // 500ms delay per item
+            });
+        });
+    </script>       
+    
+</body>
+</html>
