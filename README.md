@@ -62,7 +62,7 @@ cd directory name
 ### 2️⃣ Install dependencies
 
 pip install -r requirements.txt
-```
+
 ### 3️⃣ Run the Flask app
 
 python app.py
@@ -72,7 +72,7 @@ python app.py
 http://127.0.0.1:5000/
 
 
-## 🌟 Impact & Benefits
+### 🌟 Impact & Benefits
 
 💡 Helps **farmers** make **informed decisions** using **data-driven insights**.  
 
