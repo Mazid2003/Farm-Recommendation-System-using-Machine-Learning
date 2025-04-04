@@ -1,3 +1,3 @@
 # Farm-Recommendation-System-using-Machine-Learning
 
-http://mazid85.pythonanywhere
+http://mazid85.pythonanywhere.com
