@@ -95,4 +95,6 @@ and also submit PRs, and give your feedback! 🔥💡
 
 This project is open-source and available under the MIT License.
 
+you can also visit the site at
+
 http://mazid85.pythonanywhere.com
