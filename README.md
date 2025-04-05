@@ -84,7 +84,8 @@ http://127.0.0.1:5000/
 This project is a step toward **intelligent agriculture**, empowering farmers with **data-driven decision-making tools**. 🌱🚜  
 
 Made with ❤️ by **Mohammad Mazid**
-🤝 Contributing
+
+**🤝 Contributing**
 
 Feel free to fork the repo and improve the game with new features or optimizations. Pull requests are welcome!
 
