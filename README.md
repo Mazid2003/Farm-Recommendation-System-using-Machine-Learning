@@ -84,5 +84,14 @@ http://127.0.0.1:5000/
 This project is a step toward **intelligent agriculture**, empowering farmers with **data-driven decision-making tools**. 🌱🚜  
 
 Made with ❤️ by **Mohammad Mazid**
+🤝 Contributing
+
+Feel free to fork the repo and improve the game with new features or optimizations. Pull requests are welcome!
+
+and also submit PRs, and give your feedback! 🔥💡
+
+📜 License
+
+This project is open-source and available under the MIT License.
 
 http://mazid85.pythonanywhere.com
