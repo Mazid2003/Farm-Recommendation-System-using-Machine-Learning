@@ -91,7 +91,7 @@ Feel free to fork the repo and improve the game with new features or optimizatio
 
 and also submit PRs, and give your feedback! 🔥💡
 
-📜 License
+**📜 License**
 
 This project is open-source and available under the MIT License.
 
