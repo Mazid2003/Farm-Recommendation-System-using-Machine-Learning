@@ -1,4 +1,4 @@
-# 🌟 Data-Driven AI for Sustainable Farming
+# 🌟 Farm-Recommendation-System-using-Machine-Learning
 
 ## 💡 Overview
 This project is designed to assist farmers in making **data-driven decisions** about crop selection, market trends, and sustainability. Using **rule-based decision logic**, it recommends **optimal crops** based on **soil conditions, climate factors, and market demand**.
