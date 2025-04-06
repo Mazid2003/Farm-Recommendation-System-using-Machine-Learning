@@ -6,9 +6,9 @@ This project is designed to assist farmers in making **data-driven decisions** a
 ## 🔍 Problem Statement
 Farmers often struggle with **choosing the right crops** due to unpredictable weather, soil conditions, and fluctuating market demand. Traditional methods lack **data-driven insights**, leading to **low productivity and financial losses**. This project provides **intelligent recommendations** to optimize **crop yield and profitability**.
 
-you can also visit the site at
+**you can also visit the site at**
 
-http://mazid85.pythonanywhere.com
+**http://mazid85.pythonanywhere.com**
 
 ## 🔋 Key Features
 
