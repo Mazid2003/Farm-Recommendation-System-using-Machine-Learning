@@ -4,6 +4,7 @@ numpy==1.21.2
 scikit-learn==0.24.2
 matplotlib==3.4.3
 seaborn==0.11.2
+
 Explanation of Included Packages:
 
 Flask: A lightweight WSGI web application framework used to develop the web interface of the application.​
