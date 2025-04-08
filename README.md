@@ -75,6 +75,14 @@ python app.py
 
 http://127.0.0.1:5000/
 
+**Web App Images**
+
+**1. The main page**
+![out1](https://github.com/user-attachments/assets/4dcbeabb-f3b5-44c7-8da2-a8f9d9f4184b)
+
+**This is the result or recommendation page**
+![out2](https://github.com/user-attachments/assets/ff3c7d10-c96f-45d4-9950-012a9c273c91)
+![out3 1](https://github.com/user-attachments/assets/f4af4682-a1a9-451f-892e-1508f071e9b2)
 
 ### 🌟 Impact & Benefits
 
