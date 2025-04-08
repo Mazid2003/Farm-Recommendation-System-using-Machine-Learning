@@ -1,1 +1,23 @@
+Flask==2.0.1
+pandas==1.3.3
+numpy==1.21.2
+scikit-learn==0.24.2
+matplotlib==3.4.3
+seaborn==0.11.2
+Explanation of Included Packages:
 
+Flask: A lightweight WSGI web application framework used to develop the web interface of the application.​
+
+pandas: Provides data structures and data analysis tools needed for data manipulation and preprocessing.​
+
+numpy: Supports large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.​
+
+scikit-learn: Offers simple and efficient tools for predictive data analysis, including various machine learning algorithms.​
+
+matplotlib: A plotting library used for creating static, animated, and interactive visualizations in Python.​
+
+seaborn: Based on matplotlib, it provides a high-level interface for drawing attractive and informative statistical graphics.​
+
+you can install with the single command by using:
+
+pip install Flask pandas numpy scikit-learn matplotlib seaborn
